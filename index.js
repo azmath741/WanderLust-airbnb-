@@ -55,11 +55,6 @@ const sessionOptions = {
   }
 }
 
-//  route's
-// app.get('/', (req, res) => {
-//   res.send('this is a root route');
-// });
-
 app.use(session(sessionOptions));
 app.use(flash());
 
@@ -78,6 +73,9 @@ app.use((req, res, next) => {
   next();
 });
 //routes
+app.get('/', (req, res) => {
+  res.render('./listings.home.ejs');
+});
 app.use("/allListings", listingRouter);
 app.use("/allListings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
