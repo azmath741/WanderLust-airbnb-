@@ -3,9 +3,11 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  position: relative;
 }
 
 .container {
+  margin: 1rem 0 8rem 0;
   flex: 1;
 }
 
@@ -33,8 +35,12 @@ body {
 }
 
 .f-info-links,
-.f-info-socials {
+.f-info-socials,
+.f-info-brand {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .f-info-socials i {
@@ -47,10 +53,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: space-evenly;
   height: 8rem;
+  width: 100vw;
   background-color: #ebebeb;
-
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 /* cards*/
@@ -89,11 +98,12 @@ body {
 /*edit form*/
 .update-btn {
   background-color: #fe424d !important;
+  margin-bottom: 3rem;
 }
 
 /*show page*/
 .show-img {
-  height: 30vh;
+  height: 16vw;
   object-fit: cover;
   border-radius: 1rem;
   margin-bottom: 2rem;
@@ -146,6 +156,12 @@ body {
   text-decoration: none;
   color: #ebebeb;
 }
-.nav-btn{
-    background-color: #fe424d !important;
+
+.nav-btn {
+  background-color: #fe424d !important;
+}
+
+.review-card {
+  border: 2px solid rgb(84, 80, 80);
+  padding: 0.5rem;
 }
