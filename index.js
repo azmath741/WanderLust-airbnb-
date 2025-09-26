@@ -74,7 +74,7 @@ app.use((req, res, next) => {
 });
 //routes
 app.get('/', (req, res) => {
-  res.render('./listings.home.ejs');
+  res.render('./listings/home.ejs');
 });
 app.use("/allListings", listingRouter);
 app.use("/allListings/:id/reviews", reviewRouter);
