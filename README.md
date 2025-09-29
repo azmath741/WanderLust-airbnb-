@@ -56,7 +56,7 @@ Wanderlust is a clone of Airbnb designed for learning and portfolio purposes. It
 - Install dependencies:
   npm install
 - Make sure you have MongoDB running locally or use a MongoDB Atlas cluster.
-- ##⚙️ Configuration
+## ⚙️ Configuration
   Create a .env file in the root directory and add the following:
 
      CLOUDINARY_CLOUD_NAME=your_cloud_name
@@ -70,27 +70,27 @@ Wanderlust is a clone of Airbnb designed for learning and portfolio purposes. It
 - Navigate to:http://localhost:8080
 
 ## 📸 Examples
-1.Homepage: Browse listings
+- Homepage: Browse listings
 
-2.Listing Page: View details, images, and reviews
+- Listing Page: View details, images, and reviews
 
-3.Authentication: Register & login/logout
+- Authentication: Register & login/logout
 
-4.Dashboard: Manage your listings
+- Dashboard: Manage your listings
 
 ## 🛠️ Troubleshooting
 
-1.MongoDB not connecting?
+- MongoDB not connecting?
 Check that your MONGO_URI in .env is correct.
 
-2.Images not uploading?
+- Images not uploading?
 Ensure your Cloudinary credentials are valid and the cloudinary package is configured correctly.
 
-3.Session issues?
+- Session issues?
 Confirm your SESSION_SECRET is set and connect-mongo is connected to your database.
 
 ## 👥 Contributors
-**.**Mohammed Azmath Ali
+- Mohammed Azmath Ali
 
 ## 📜 License
 
