@@ -1,4 +1,30 @@
 <% layout("/layouts/boilerplate.ejs") -%>
+  <style>
+    @media only screen and (max-width: 992px) {
+      .home {
+        text-align: center;
+      }
+
+      .logo {
+        font-size: 6rem;
+        color: #fe424d;
+      }
+
+      .slogan h2 {
+        font-size: 1.5rem;
+      }
+
+      .about p {
+        font-size: 1rem;
+      }
+
+      .nav-btn a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+      }
+    }
+  </style>
 
   <body>
     <div class="home">
@@ -11,10 +37,8 @@
             Where your next adventure begins</b></h2>
       </div>
       <div class="about mb-2 mt-2">
-        <p>Powerful, seamless, and adventure-ready travel platform.<br> Discover unique stays, explore hidden gems,<br>
-          and book
-          unforgettable experiences across the globe with ease.</p>
+        <p>Powerful, seamless, and adventure-ready travel platform.<br> Discover unique stays, explore hidden gems</p>
       </div>
-      <button class="btn nav-btn mb-3"><a href="http://localhost:8080/allListings"><b>All Listings</b></a></button>
+      <button class="btn nav-btn mb-3"><a href="/allListings"><b>Explore</b></a></button>
     </div>
   </body>

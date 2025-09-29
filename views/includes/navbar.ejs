@@ -1,21 +1,25 @@
 <style>
-  .search-btn {
+  .search-btn,
+  .dsearch-btn {
     background-color: #fe424d;
     color: #fff;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     border-radius: 25px;
-    padding: 0 1rem;
+    padding: 0 0.3rem;
   }
 
-  .search-btn:hover {
+
+  .search-btn,
+  .dsearch-btn:hover {
     background-color: #fe424d;
     color: #fff;
   }
 
-  .search-btn i {
+  .search-btn,
+  .dsearch-btn i {
     margin-right: 0.5rem;
   }
 
@@ -23,6 +27,39 @@
     border-radius: 25px;
     padding: 0.5rem 3rem;
     font-size: 0.8rem;
+  }
+
+  .dsearch-input {
+    border-radius: 25px;
+    width: 250px;
+    padding: 0.5rem 0.5rem;
+  }
+
+
+  @media only screen and (max-width: 809px) {
+    .navbar-collapse {
+      background-color: white;
+    }
+
+    .pmedia {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-input,
+    .search-btn {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 809px) {
+
+    .dsearch-input,
+    .dsearch-btn {
+      display: none;
+    }
   }
 </style>
 
@@ -55,3 +92,11 @@
     </div>
   </div>
 </nav>
+<div class="row pmedia ">
+  <div class="navbar-nav mt-4 mb-3 col-8 offset-1">
+    <form action="/allListings" method="GET" class="d-flex" role="search">
+      <input class="form-control me-2 dsearch-input" type="search" name="q" placeholder="Search destinations" />
+      <button class="btn dsearch-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
+  </div>
+</div>

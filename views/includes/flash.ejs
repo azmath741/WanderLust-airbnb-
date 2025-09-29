@@ -1,12 +1,46 @@
-<% if(success&&success.length){%>
-  <div class="alert alert-success alert-dismissible fade show col-6 offset-3" role="alert">
-    <%= success[0] %>
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>
-  <%}%>
-    <% if(error&&error.length){%>
-      <div class="alert alert-danger alert-dismissible fade show col-6 offset-3" role="alert">
-        <%= error[0] %>
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-      <%}%>
+<style>
+  @media only screen and (max-width: 992px) {
+    .alert {
+      width: 69%;
+    }
+
+    .window {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+    .phone {
+      display: none;
+    }
+  }
+</style>
+<div class="window">
+  <% if(success&&success.length){%>
+    <div class="alert alert-success alert-dismissible fade show col-6 offset-3" role="alert">
+      <%= success[0] %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <%}%>
+      <% if(error&&error.length){%>
+        <div class="alert alert-danger alert-dismissible fade show col-6 offset-3" role="alert">
+          <%= error[0] %>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <%}%>
+</div>
+
+<div class="phone">
+  <% if(success&&success.length){%>
+    <div class="alert alert-success alert-dismissible fade show col-6 offset-2" role="alert">
+      <%= success[0] %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <%}%>
+      <% if(error&&error.length){%>
+        <div class="alert alert-danger alert-dismissible fade show col-6 offset-2" role="alert">
+          <%= error[0] %>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <%}%>
+</div>

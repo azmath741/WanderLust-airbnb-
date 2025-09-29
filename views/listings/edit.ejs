@@ -1,7 +1,31 @@
 <% layout('/layouts/boilerplate.ejs')-%>
 
+  <style>
+    @media only screen and (max-width: 992px) {
+      .windows {
+        display: none;
+      }
+
+      .photo {
+        height: 200px;
+        width: 100%;
+      }
+    }
+
+    @media only screen and (min-width: 992px) {
+      .phone {
+        display: none;
+      }
+
+      .window-photo {
+        height: 220px;
+        width: 40%;
+      }
+    }
+  </style>
+
   <body>
-    <div class="row">
+    <div class="row windows">
       <div class="col-8 offset-2">
         <h3>Edit Your Listing</h3><br>
         <form method="post" action="/allListings/<%= listing._id %>?_method=PATCH" novalidate class="needs-validation"
@@ -19,7 +43,89 @@
 
           <div>
             <p>Original Image</p>
-            <img src="<%=originalImageUrl%>">
+            <img src="<%=originalImageUrl%>" class="window-photo">
+          </div><br>
+          <div class="mb-3">
+            <label for="image" class="form-label">Upload Image</label>
+            <input type="file" id="image" class="form-control" name="listing[image]">
+          </div>
+
+          <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea type="text" id="description" class="form-control" name="listing[description]"
+              value="<%= listing.description %>"><%= listing.description %></textarea>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please provide a valid short description.
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="mb-3 col-md-4">
+              <label for="price" class="form-label">PRICE</label>
+              <input type="number" id="price" class="form-control" name="listing[price]" value="<%= listing.price %>">
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please provide a valid price.
+              </div>
+            </div>
+
+            <div class="mb-3 col-md-8">
+              <label for="country" class="form-label">Country</label>
+              <input type="text" id="country" class="form-control" name="listing[country]"
+                value="<%= listing.country %>">
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please provide a valid country.
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" id="location" class="form-control" name="listing[location]"
+              value="<%= listing.location %>">
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please provide a valid location.
+            </div>
+          </div>
+
+          <button class="btn update-btn">Update Listing</button>
+        </form>
+      </div>
+    </div>
+
+
+
+
+    <div class="row phone">
+      <div class="col-8 offset-2">
+        <h3>Edit Your Listing</h3><br>
+        <form method="post" action="/allListings/<%= listing._id %>?_method=PATCH" novalidate class="needs-validation"
+          enctype="multipart/form-data">
+          <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" id="title" class="form-control" name="listing[title]" value="<%= listing.title %>">
+            <div class="invalid-feedback">
+              Please provide a title for your listing.
+            </div>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+
+          <div>
+            <p>Original Image</p>
+            <img src="<%=originalImageUrl%>" class="photo">
           </div><br>
           <div class="mb-3">
             <label for="image" class="form-label">Upload Image</label>

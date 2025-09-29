@@ -24,6 +24,7 @@ app.use(methodOverride('_method'));
 app.engine('ejs',ejsMate);
 //setting up mongoose and connecting to db
 const dbUrl = process.env.ATLASDB_URL;
+
 main()
   .then(()=> console.log('Connected to db'))
   .catch(err => console.log(err));
@@ -55,11 +56,6 @@ const sessionOptions = {
   }
 }
 
-//  route's
-// app.get('/', (req, res) => {
-//   res.send('this is a root route');
-// });
-
 app.use(session(sessionOptions));
 app.use(flash());
 
@@ -78,6 +74,9 @@ app.use((req, res, next) => {
   next();
 });
 //routes
+app.get('/', (req, res) => {
+  res.render('./listings/home.ejs');
+});
 app.use("/allListings", listingRouter);
 app.use("/allListings/:id/reviews", reviewRouter);
 app.use("/", userRouter);

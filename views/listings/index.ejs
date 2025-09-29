@@ -43,12 +43,24 @@
       align-items: center;
       justify-content: center;
     }
+
+    @media only screen and (max-width: 992px) {
+      #filters {
+        display: none;
+      }
+    }
+
+    @media only screen and (min-width: 993px) {
+      #filters {
+        display: hidden;
+      }
+    }
   </style>
   <div id="filters">
-    <div class="filter">
+    <!--  <div class="filter">
       <div><i class="fa-solid fa-fire"></i></div>
       <p>Trending</p>
-    </div>
+    </div>-->
     <div class="filter">
       <div><i class="fa-solid fa-bed"></i></div>
       <p>Room</p>
