@@ -64,12 +64,12 @@ Create a .env file in the root directory and add the following:
      CLOUDINARY_SECRET=your_cloudinary_api_secret
      MONGO_URI=your_mongo_database_url
      SESSION_SECRET=your_session_secret
-##▶️ Usage
+## ▶️ Usage
 
 Start the development server:  npm start
 Navigate to:http://localhost:8080
 
-##📸 Examples
+## 📸 Examples
 1.Homepage: Browse listings
 
 2.Listing Page: View details, images, and reviews
@@ -78,7 +78,7 @@ Navigate to:http://localhost:8080
 
 4.Dashboard: Manage your listings
 
-##🛠️ Troubleshooting
+## 🛠️ Troubleshooting
 
 1.MongoDB not connecting?
 Check that your MONGO_URI in .env is correct.
@@ -89,9 +89,9 @@ Ensure your Cloudinary credentials are valid and the cloudinary package is confi
 3.Session issues?
 Confirm your SESSION_SECRET is set and connect-mongo is connected to your database.
 
-##👥 Contributors
+## 👥 Contributors
 **.**Mohammed Azmath Ali
 
-##📜 License
+## 📜 License
 
 This project is licensed under the MIT License.
