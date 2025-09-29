@@ -49,15 +49,15 @@ Wanderlust is a clone of Airbnb designed for learning and portfolio purposes. It
 
 ## 💻 Installation
 
-- 1. Clone the repository:  
+- Clone the repository:  
    ```bash
    git clone https://github.com/azmath741/WanderLust-airbnb-.git
    cd wanderlust
-- 2.Install dependencies:
+- Install dependencies:
   npm install
-- 3.Make sure you have MongoDB running locally or use a MongoDB Atlas cluster.
-##⚙️ Configuration
-- Create a .env file in the root directory and add the following:
+- Make sure you have MongoDB running locally or use a MongoDB Atlas cluster.
+- ##⚙️ Configuration
+  Create a .env file in the root directory and add the following:
 
      CLOUDINARY_CLOUD_NAME=your_cloud_name
      CLOUDINARY_KEY=your_cloudinary_api_key
