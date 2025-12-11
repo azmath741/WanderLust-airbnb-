@@ -91,7 +91,4 @@ Confirm your SESSION_SECRET is set and connect-mongo is connected to your databa
 
 ## 👥 Contributors
 - Mohammed Azmath Ali
-
-## 📜 License
-
-This project is licensed under the MIT License.
+  
